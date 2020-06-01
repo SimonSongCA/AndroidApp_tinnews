@@ -8,7 +8,6 @@ import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.tinnews.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.tinnews.model.NewsResponse;
 import com.tinnews.network.NewsApi;
@@ -26,30 +25,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //bottom navigation view
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment);
+        //fragment container
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         navController = navHostFragment.getNavController();
         NavigationUI.setupWithNavController(navView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController);
-
-//        NewsApi api = RetrofitClient.newInstance(this).create(NewsApi.class);
-//        api.getTopHeadlines("US").enqueue(new Callback<NewsResponse>() {
-//            @Override
-//            public void onResponse(Call<NewsResponse> call, Response<NewsResponse> response) {
-//                if (response.isSuccessful()) {
-//                    Log.d("getTopHeadlines", response.body().toString());
-//                } else {
-//                    Log.d("getTopHeadlines", response.toString());
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<NewsResponse> call, Throwable t) {
-//                Log.d("getTopHeadlines", t.toString());
-//            }
-//        });
-
     }
 
     @Override

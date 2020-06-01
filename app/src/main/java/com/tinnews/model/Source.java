@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Source {
     public String id;
-    public  String name;
+    public String name;
 
     @Override
     public boolean equals(Object o) {

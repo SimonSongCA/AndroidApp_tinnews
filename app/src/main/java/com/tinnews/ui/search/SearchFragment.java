@@ -20,10 +20,13 @@ import com.tinnews.repository.NewsViewModelFactory;
  * A simple {@link Fragment} subclass.
  */
 public class SearchFragment extends Fragment {
+
     private SearchViewModel viewModel;
+
     public SearchFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,5 +53,4 @@ public class SearchFragment extends Fragment {
                             }
                         });
     }
-
 }

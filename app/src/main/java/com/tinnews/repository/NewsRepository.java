@@ -1,27 +1,19 @@
 package com.tinnews.repository;
 
 import android.content.Context;
-import android.os.AsyncTask;
-import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.tinnews.TinNewsApplication;
-//import com.tinnews.database.AppDatabase;
-import com.tinnews.model.Article;
 import com.tinnews.model.NewsResponse;
 import com.tinnews.network.NewsApi;
 import com.tinnews.network.RetrofitClient;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class NewsRepository {
-
     private final NewsApi newsApi;
 
     public NewsRepository(Context context) {
@@ -70,6 +62,4 @@ public class NewsRepository {
                         });
         return everyThingLiveData;
     }
-
-
 }

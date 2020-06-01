@@ -25,5 +25,4 @@ public class NewsViewModelFactory implements ViewModelProvider.Factory {
             throw new IllegalStateException("Unknown ViewModel");
         }
     }
-
 }

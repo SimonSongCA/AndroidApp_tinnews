@@ -8,9 +8,7 @@ import androidx.lifecycle.ViewModel;
 import com.tinnews.model.NewsResponse;
 import com.tinnews.repository.NewsRepository;
 
-
 public class HomeViewModel extends ViewModel {
-
     private final NewsRepository repository;
     private final MutableLiveData<String> countryInput = new MutableLiveData<>();
 

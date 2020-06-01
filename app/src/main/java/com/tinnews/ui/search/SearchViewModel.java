@@ -9,7 +9,6 @@ import com.tinnews.model.NewsResponse;
 import com.tinnews.repository.NewsRepository;
 
 public class SearchViewModel extends ViewModel {
-
     private final NewsRepository repository;
     private final MutableLiveData<String> searchInput = new MutableLiveData<>();
 
@@ -24,5 +23,4 @@ public class SearchViewModel extends ViewModel {
     public LiveData<NewsResponse> searchNews() {
         return Transformations.switchMap(searchInput, repository::searchNews);
     }
-
 }

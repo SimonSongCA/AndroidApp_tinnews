@@ -5,11 +5,13 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Article {
-    @Ignore
+public class Article implements Serializable {
+
+@Ignore
     public Source source;
     public String author;
     public String content;

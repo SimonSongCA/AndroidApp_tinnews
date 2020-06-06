@@ -48,6 +48,10 @@ public class SearchNewsAdapter extends RecyclerView.Adapter<SearchNewsAdapter.Se
     @Override
     public void onBindViewHolder(@NonNull SearchNewsViewHolder holder, int position) {
         Article article = articles.get(position);
+        holder.itemView.setOnClickListener(
+                v -> {
+                    likeListener.onClick(article);
+                });
 //        Picasso.get().load(article.urlToImage).into(holder.newsImage);
         if (article.urlToImage == null) {
             holder.newsImage.setImageResource(R.drawable.ic_empty_image);

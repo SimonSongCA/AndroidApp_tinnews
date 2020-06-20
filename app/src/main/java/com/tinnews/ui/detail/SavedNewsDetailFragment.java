@@ -26,14 +26,12 @@ public class SavedNewsDetailFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentSavedNewsDetailBinding.inflate(inflater, container, false);
         return binding.getRoot();
-
     }
 
     @Override
